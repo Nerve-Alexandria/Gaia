@@ -32,39 +32,39 @@ namespace MoonPincho
 		/// <summary>
 		/// <para>Lista de vectores de la linea.</para>
 		/// </summary>
-		public List<Vector2> vectores;                                          // Lista de vectores de la linea
+		private List<Vector2> vectores;                                         // Lista de vectores de la linea
 		#endregion
 
 		#region Actualizadores
 		/// <summary>
 		/// <para>Actualiza la linea con los vectores dados.</para>
 		/// </summary>
-		/// <param name="vector">Vector dado.</param>
-		public void UpdateLinea(Vector2 vector)// Actualiza la linea con los vectores dados
+		/// <param name="posicion">Posicion dada.</param>
+		public void UpdateLinea(Vector2 posicion)// Actualiza la linea con los vectores dados
 		{
 			// Si no hay vectores
 			if (vectores == null)
 			{
 				// Obtener los vectores
 				vectores = new List<Vector2>();
-				SetVectores(vector);
+				SetVector(posicion);
 				return;
 			}
 
-			// Dibuja linea
-			if (Vector2.Distance(vectores.Last(), vector) > 0.1f)
+			// Comprobar la distancia
+			if (Vector2.Distance(vectores.Last(), posicion) > .1f)
 			{
-				SetVectores(vector);
+				SetVector(posicion);
 			}
 		}
 		#endregion
 
 		#region API	
 		/// <summary>
-		/// <para>Fija los vectores dados.</para>
+		/// <para>Fija el vector dado.</para>
 		/// </summary>
 		/// <param name="vector">Vector dado.</param>
-		private void SetVectores(Vector2 vector)// Fija los vectores dados
+		private void SetVector(Vector2 vector)// Fija el vector dado
 		{
 			// Agrega el vector a la lista de vectores
 			vectores.Add(vector);
@@ -73,7 +73,7 @@ namespace MoonPincho
 			lineRenderer.numPositions = vectores.Count;
 			lineRenderer.SetPosition(vectores.Count - 1, vector);
 
-			// Fija los vectores del collider
+			// Fija el vector del collider
 			if (vectores.Count > 1)
 			{
 				edgeCol.points = vectores.ToArray();

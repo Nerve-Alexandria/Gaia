@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 120070421417831246}
   - component: {fileID: 68126353100330744}
   - component: {fileID: 114644631715377514}
+  - component: {fileID: 252650446026402090}
   m_Layer: 0
   m_Name: Linea
   m_TagString: Untagged
@@ -50,9 +51,9 @@ EdgeCollider2D:
   m_GameObject: {fileID: 1445707308681776}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 80975337d00e96743bc260f3d98738cb, type: 2}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_Offset: {x: 0, y: 0}
   m_Points:
   - {x: -0.5, y: 0}
@@ -70,7 +71,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 120070421417831246}
   edgeCol: {fileID: 68126353100330744}
-  vectores: []
 --- !u!120 &120070421417831246
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -169,3 +169,20 @@ LineRenderer:
     alignment: 0
     textureMode: 0
   m_UseWorldSpace: 1
+--- !u!252 &252650446026402090
+SurfaceEffector2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1445707308681776}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Speed: 8
+  m_SpeedVariation: 0
+  m_ForceScale: 0.1
+  m_UseContactForce: 0
+  m_UseFriction: 1
+  m_UseBounce: 1

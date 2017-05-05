@@ -9,6 +9,7 @@
 
 #region Librerias
 using UnityEngine;
+using UnityEngine.SceneManagement;
 #endregion
 
 namespace MoonAntonio.ColorSwitch
@@ -131,12 +132,13 @@ namespace MoonAntonio.ColorSwitch
 			if (collision.tag == "ColorSiguiente")
 			{
 				SetRandomColor();
+				Destroy(collision.gameObject);
 				return;
 			}
 
 			if (collision.tag != ColorToString())
 			{
-				// TODO Game Over
+				SceneManager.LoadScene("15");
 			}
 		}
 		#endregion

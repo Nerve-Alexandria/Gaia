@@ -36,6 +36,7 @@ namespace MoonAntonio.ColorSwitch
 		private void Update()// Actualizador de CirculoColorSwitch
 		{
 			// Cuando damos click, damos impulso
+			// NOTA: El click del raton es mas lento que el SPACE
 			if (Input.GetButtonDown("Jump") || Input.GetMouseButtonDown(0)) Impulso();
 		}
 		#endregion

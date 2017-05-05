@@ -106,7 +106,7 @@ namespace MoonAntonio.Sigilo
 			float anguloObjetivo = 90 - Mathf.Atan2(dir.z, dir.x) * Mathf.Rad2Deg;
 
 			// Rotacion hacia el objetivo
-			while (Mathf.DeltaAngle(this.transform.eulerAngles.y,anguloObjetivo) > 0.05f)
+			while (Mathf.Abs(Mathf.DeltaAngle(this.transform.eulerAngles.y,anguloObjetivo)) > 0.05f)
 			{
 				float angulo = Mathf.MoveTowardsAngle(this.transform.eulerAngles.y, anguloObjetivo, velRot * Time.deltaTime);
 				this.transform.eulerAngles = Vector3.up * angulo;

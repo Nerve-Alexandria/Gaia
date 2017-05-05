@@ -46,6 +46,7 @@ namespace MoonAntonio.Sigilo
 			for (int n = 0; n < waypoints.Length; n++)
 			{
 				waypoints[n] = path.GetChild(n).position;
+				waypoints[n] = new Vector3(waypoints[n].x, this.transform.position.y, waypoints[n].z);
 			}
 
 			// Iniciamos ruta

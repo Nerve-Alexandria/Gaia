@@ -29,9 +29,29 @@ namespace MoonAntonio.ColorSwitch
 		/// </summary>
 		public Rigidbody2D rb;                                                  // RigidBody del circulo
 		/// <summary>
+		/// <para>Sprite del circulo.</para>
+		/// </summary>
+		public SpriteRenderer spriteCirculo;									// Sprite del circulo
+		/// <summary>
 		/// <para>Color actual del usuario.</para>
 		/// </summary>
-		public Colores colorActual;												// Color actual del usuario
+		public Colores colorActual;                                             // Color actual del usuario
+		/// <summary>
+		/// <para>Color del cyan</para>
+		/// </summary>
+		public Color colorCyan;													// Color del cyan
+		/// <summary>
+		/// <para>Color del amarillo</para>
+		/// </summary>
+		public Color colorAmarillo;												// Color del amarillo
+		/// <summary>
+		/// <para>Color del morado</para>
+		/// </summary>
+		public Color colorMorado;												// Color del morado
+		/// <summary>
+		/// <para>Color del rosa</para>
+		/// </summary>
+		public Color colorRosa;													// Color del rosa
 		#endregion
 
 		#region Inicializadores
@@ -77,22 +97,27 @@ namespace MoonAntonio.ColorSwitch
 			{
 				case 0:
 					colorActual = Colores.Cyan;
+					spriteCirculo.color = colorCyan;
 					break;
 
 				case 1:
 					colorActual = Colores.Amarillo;
+					spriteCirculo.color = colorAmarillo;
 					break;
 
 				case 2:
 					colorActual = Colores.Morado;
+					spriteCirculo.color = colorMorado;
 					break;
 
 				case 3:
 					colorActual = Colores.Rosa;
+					spriteCirculo.color = colorRosa;
 					break;
 
 				default:
 					colorActual = Colores.Cyan;
+					spriteCirculo.color = colorCyan;
 					break;
 			}
 		}

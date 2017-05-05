@@ -47,6 +47,9 @@ namespace MoonAntonio.Sigilo
 			{
 				waypoints[n] = path.GetChild(n).position;
 			}
+
+			// Iniciamos ruta
+			StartCoroutine(GotoPath(waypoints));
 		}
 		#endregion
 
@@ -73,8 +76,12 @@ namespace MoonAntonio.Sigilo
 				// Pasar al siguiente waypoint
 				if (this.transform.position == objetivoWay)
 				{
+					// Actualizamos parametros
 					objetivoActual = (objetivoActual + 1) % waypoints.Length;
+					objetivoWay = waypoints[objetivoActual];
+					yield return new WaitForSeconds(timeGuardia);
 				}
+				yield return null;
 			}
 		}
 		#endregion

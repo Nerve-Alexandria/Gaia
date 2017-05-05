@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 #endregion
 
-namespace MoonPincho.LineRenderer
+namespace MoonAntonio.Line
 {
 	/// <summary>
 	/// <para>Clase de la linea.</para>

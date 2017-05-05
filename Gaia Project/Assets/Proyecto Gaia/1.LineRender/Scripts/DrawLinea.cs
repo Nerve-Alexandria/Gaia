@@ -11,7 +11,7 @@
 using UnityEngine;
 #endregion
 
-namespace MoonPincho.LineRenderer
+namespace MoonAntonio.Line
 {
 	/// <summary>
 	/// <para>Dibuja una linea en la direccion dada.</para>

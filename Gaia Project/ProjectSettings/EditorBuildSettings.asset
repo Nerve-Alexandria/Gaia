@@ -6,6 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Proyecto Gaia/1.LineRender/Scene/01.unity
+    path: Assets/Proyecto Gaia/1.LineRender/Escenas/01.unity
+    guid: b51e4015aa66cec40a17cfea0970ad74
   - enabled: 1
     path: Assets/Proyecto Gaia/2.Pincho/Escenas/02.unity
+    guid: d9dc3b1133911414dba35d73fe0b27a4
+  - enabled: 1
+    path: Assets/Proyecto Gaia/15.Color Switch/Escenas/15.unity
+    guid: bf22c9167f93cb7459bcd75de9687b0e

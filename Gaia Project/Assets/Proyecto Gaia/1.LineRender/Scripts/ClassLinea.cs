@@ -70,7 +70,7 @@ namespace MoonPincho
 			vectores.Add(vector);
 
 			// Actualiza y fija la posicion de la linea
-			lineRenderer.numPositions = vectores.Count;
+			lineRenderer.positionCount = vectores.Count;
 			lineRenderer.SetPosition(vectores.Count - 1, vector);
 
 			// Fija el vector del collider

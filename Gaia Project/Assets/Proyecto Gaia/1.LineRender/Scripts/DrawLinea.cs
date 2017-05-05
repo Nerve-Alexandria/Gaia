@@ -16,6 +16,7 @@ namespace MoonAntonio.Line
 	/// <summary>
 	/// <para>Dibuja una linea en la direccion dada.</para>
 	/// </summary>
+	[AddComponentMenu("MoonAntonio/Line/DrawLinea")]
 	public class DrawLinea : MonoBehaviour 
 	{
 		#region Variables Publicas

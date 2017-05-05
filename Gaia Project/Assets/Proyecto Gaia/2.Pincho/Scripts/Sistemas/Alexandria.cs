@@ -15,9 +15,10 @@ using UnityEngine.UI;
 
 namespace MoonAntonio.Pincho
 {
-    /// <summary>
-    /// <para>Game manager del juego </para>
-    /// </summary>
+	/// <summary>
+	/// <para>Game manager del juego </para>
+	/// </summary>
+	[AddComponentMenu("MoonAntonio/Pincho/Alexandria")]
 	public class Alexandria : MonoBehaviour 
 	{
         #region Biblioteca

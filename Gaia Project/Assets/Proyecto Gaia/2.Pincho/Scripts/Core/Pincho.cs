@@ -13,9 +13,10 @@ using UnityEngine;
 
 namespace MoonAntonio.Pincho
 {
-    /// <summary>
-    /// <para>Control del pincho </para>
-    /// </summary>
+	/// <summary>
+	/// <para>Control del pincho </para>
+	/// </summary>
+	[AddComponentMenu("MoonAntonio/Pincho/Pincho")]
 	public class Pincho : MonoBehaviour 
 	{
         #region Variables Publicas

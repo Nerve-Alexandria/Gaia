@@ -16,6 +16,7 @@ namespace MoonAntonio.ColorSwitch
 	/// <summary>
 	/// <para>Controller del circulo de colores</para>
 	/// </summary>
+	[AddComponentMenu("MoonAntonio/ColorSwitch/CirculoColor")]
 	public class CirculoColor : MonoBehaviour 
 	{
 		#region Variables Publicas

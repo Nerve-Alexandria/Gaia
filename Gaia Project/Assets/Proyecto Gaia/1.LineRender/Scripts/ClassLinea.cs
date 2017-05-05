@@ -18,6 +18,7 @@ namespace MoonAntonio.Line
 	/// <summary>
 	/// <para>Clase de la linea.</para>
 	/// </summary>
+	[AddComponentMenu("MoonAntonio/Line/ClassLinea")]
 	public class ClassLinea : MonoBehaviour 
 	{
 		#region Variables Publicas

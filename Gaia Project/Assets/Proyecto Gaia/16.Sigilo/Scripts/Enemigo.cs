@@ -36,7 +36,22 @@ namespace MoonAntonio.Sigilo
 		/// <summary>
 		/// <para>Velocidad de rotacion del enemigo</para>
 		/// </summary>
-		public float velRot = 0;										// Velocidad de rotacion del enemigo
+		public float velRot = 0;                                        // Velocidad de rotacion del enemigo
+		/// <summary>
+		/// <para>Luz del enemigo</para>
+		/// </summary>
+		public Light luz;												// Luz del enemigo
+		/// <summary>
+		/// <para>Rango del enemigo</para>
+		/// </summary>
+		public float rango = 0;											// Rango del enemigo
+		#endregion
+
+		#region Variables Privadas
+		/// <summary>
+		/// <para>Angulo de vision del enemigo</para>
+		/// </summary>
+		private float anguloVision = 0;									// Angulo de vision del enemigo
 		#endregion
 
 		#region Inicializadores
@@ -45,6 +60,9 @@ namespace MoonAntonio.Sigilo
 		/// </summary>
 		private void Start()// Init de Enemigo
 		{
+			// Asignar el angulo de vision del enemigo
+			anguloVision = luz.spotAngle;
+
 			// Llenar el array con los waypoints
 			Vector3[] waypoints = new Vector3[path.childCount];
 			for (int n = 0; n < waypoints.Length; n++)
@@ -135,6 +153,8 @@ namespace MoonAntonio.Sigilo
 					posAnterior = way.position;
 				}
 				Gizmos.DrawLine(posAnterior, posInicial);
+				Gizmos.color = Color.red;
+				Gizmos.DrawRay(transform.position, transform.forward * rango);
 			}
 		}
 		#endregion

@@ -317,23 +317,15 @@ Prefab:
       propertyPath: path
       value: 
       objectReference: {fileID: 1728302206}
-    - target: {fileID: 108757425024848206, guid: 8e6a10415f772dd4d90b658421f32fd6,
+    - target: {fileID: 114992231621642088, guid: 8e6a10415f772dd4d90b658421f32fd6,
         type: 2}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4463271364756092, guid: 8e6a10415f772dd4d90b658421f32fd6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 4463271364756092, guid: 8e6a10415f772dd4d90b658421f32fd6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.69
-      objectReference: {fileID: 0}
-    - target: {fileID: 108757425024848206, guid: 8e6a10415f772dd4d90b658421f32fd6,
+      propertyPath: luz
+      value: 
+      objectReference: {fileID: 2022467330}
+    - target: {fileID: 114992231621642088, guid: 8e6a10415f772dd4d90b658421f32fd6,
         type: 2}
-      propertyPath: m_Range
-      value: 15
+      propertyPath: rango
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e6a10415f772dd4d90b658421f32fd6, type: 2}
@@ -380,3 +372,8 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c2f9194e31e19b04bb62a7fb55608f15, type: 2}
   m_IsPrefabParent: 0
+--- !u!108 &2022467330 stripped
+Light:
+  m_PrefabParentObject: {fileID: 108757425024848206, guid: 8e6a10415f772dd4d90b658421f32fd6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1743719321}

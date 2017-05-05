@@ -28,6 +28,21 @@ namespace MoonAntonio.ColorSwitch
 		/// <para>RigidBody del circulo.</para>
 		/// </summary>
 		public Rigidbody2D rb;                                                  // RigidBody del circulo
+		/// <summary>
+		/// <para>Color actual del usuario.</para>
+		/// </summary>
+		public Colores colorActual;												// Color actual del usuario
+		#endregion
+
+		#region Inicializadores
+		/// <summary>
+		/// <para>Inicializa CirculoColorSwitch.</para>
+		/// </summary>
+		private void Start()// Inicializa CirculoColorSwitch
+		{
+			// Fijar un color
+			SetRandomColor();
+		}
 		#endregion
 
 		#region Actualizadores
@@ -50,6 +65,60 @@ namespace MoonAntonio.ColorSwitch
 		{
 			rb.velocity = Vector2.up * fuerza;
 		}
+
+		/// <summary>
+		/// <para>Selecciona un color random.</para>
+		/// </summary>
+		private void SetRandomColor()// Selecciona un color random
+		{
+			int index = Random.Range(0, 3);
+
+			switch (index)
+			{
+				case 0:
+					colorActual = Colores.Cyan;
+					break;
+
+				case 1:
+					colorActual = Colores.Amarillo;
+					break;
+
+				case 2:
+					colorActual = Colores.Morado;
+					break;
+
+				case 3:
+					colorActual = Colores.Rosa;
+					break;
+
+				default:
+					colorActual = Colores.Cyan;
+					break;
+			}
+		}
+
+		/// <summary>
+		/// <para>Cuando colisiona con otro trigger</para>
+		/// </summary>
+		/// <param name="collision">Colisionador</param>
+		private void OnTriggerEnter2D(Collider2D collision)// Cuando colisiona con otro trigger
+		{
+			if (collision.tag == "Cyan")
+			{
+
+			}
+		}
 		#endregion
+	}
+
+	/// <summary>
+	/// <para>Colores del circulo.</para>
+	/// </summary>
+	public enum Colores
+	{
+		Cyan,
+		Amarillo,
+		Morado,
+		Rosa
 	}
 }

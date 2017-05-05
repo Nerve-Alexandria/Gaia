@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Pincho
   - Base
+  - Cyan
+  - Rosa
+  - Amarillo
+  - Morado
   layers:
   - Default
   - TransparentFX

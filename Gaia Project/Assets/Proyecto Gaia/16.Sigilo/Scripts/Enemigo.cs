@@ -212,7 +212,6 @@ namespace MoonAntonio.Sigilo
 					if (!Physics.Linecast(transform.position, player.position, mask))
 					{
 						return true;
-						
 					}
 				}
 			}

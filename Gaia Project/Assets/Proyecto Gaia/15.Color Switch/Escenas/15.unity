@@ -121,7 +121,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4799046508331360, guid: 56821bee438c5ca439b36d09643d860f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.81
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4799046508331360, guid: 56821bee438c5ca439b36d09643d860f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -150,6 +150,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 56821bee438c5ca439b36d09643d860f, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &37181723 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4799046508331360, guid: 56821bee438c5ca439b36d09643d860f,
+    type: 2}
+  m_PrefabInternal: {fileID: 32790711}
 --- !u!1001 &376107566
 Prefab:
   m_ObjectHideFlags: 0
@@ -163,7 +168,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4693933774005078, guid: 2b0c8cc2254a40047a333a5569c7476a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.33
+      value: 4.18
       objectReference: {fileID: 0}
     - target: {fileID: 4693933774005078, guid: 2b0c8cc2254a40047a333a5569c7476a, type: 2}
       propertyPath: m_LocalPosition.z
@@ -188,22 +193,6 @@ Prefab:
     - target: {fileID: 4693933774005078, guid: 2b0c8cc2254a40047a333a5569c7476a, type: 2}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1105931313389466, guid: 2b0c8cc2254a40047a333a5569c7476a, type: 2}
-      propertyPath: m_TagString
-      value: Rosa
-      objectReference: {fileID: 0}
-    - target: {fileID: 1656703300177044, guid: 2b0c8cc2254a40047a333a5569c7476a, type: 2}
-      propertyPath: m_TagString
-      value: Cyan
-      objectReference: {fileID: 0}
-    - target: {fileID: 1031717063231188, guid: 2b0c8cc2254a40047a333a5569c7476a, type: 2}
-      propertyPath: m_TagString
-      value: Morado
-      objectReference: {fileID: 0}
-    - target: {fileID: 1932043855589004, guid: 2b0c8cc2254a40047a333a5569c7476a, type: 2}
-      propertyPath: m_TagString
-      value: Amarillo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b0c8cc2254a40047a333a5569c7476a, type: 2}
@@ -247,6 +236,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114954027670027158, guid: 84d1586818ff032409f74b56c01554dd,
+        type: 2}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 37181723}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 84d1586818ff032409f74b56c01554dd, type: 2}
   m_IsPrefabParent: 0

@@ -26,6 +26,13 @@ Mecanicas testeadas desarrolladas en Unity3D como modo de experimento. Esto es u
   <img src="https://github.com/Nerve-Alexandria/Gaia/blob/master/res/prev15.gif?raw=true">
 </p>
 
+---
+
+## #16 Sigilo
+<p align="center">
+  <img src="https://github.com/Nerve-Alexandria/Gaia/blob/master/res/prev16.gif?raw=true">
+</p>
+
 
 ## Acreditaciones & Agradecimientos
 

@@ -284,6 +284,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 1728302206}
+  velocidad: 5
+  timeGuardia: 0.3
 --- !u!1001 &1883642519
 Prefab:
   m_ObjectHideFlags: 0

@@ -55,11 +55,15 @@ namespace MoonAntonio.Sigilo
 		/// <summary>
 		/// <para>Angulo de vision del enemigo</para>
 		/// </summary>
-		private float anguloVision = 0;                                 // Angulo de vision del enemigo
+		private float anguloVision;										// Angulo de vision del enemigo
 		/// <summary>
 		/// <para>Transform del heroe</para>
 		/// </summary>
-		private Transform player;										// Transform del heroe
+		private Transform player;                                       // Transform del heroe
+		/// <summary>
+		/// <para>Color original de la luz</para>
+		/// </summary>
+		private Color clrOriginal;										// Color original de la luz
 		#endregion
 
 		#region Inicializadores
@@ -71,6 +75,9 @@ namespace MoonAntonio.Sigilo
 			// Asignar el angulo de vision del enemigo y al heroe
 			anguloVision = luz.spotAngle;
 			player = GameObject.FindGameObjectWithTag("Player").transform;
+
+			// Obtenemos el color inicial de la luz
+			clrOriginal = luz.color;
 
 			// Llenar el array con los waypoints
 			Vector3[] waypoints = new Vector3[path.childCount];
@@ -86,6 +93,24 @@ namespace MoonAntonio.Sigilo
 		#endregion
 
 		#region Actualizadores
+		/// <summary>
+		/// <para>Actualizador de Enemigo</para>
+		/// </summary>
+		private void Update()// Actualizador de Enemigo
+		{
+			// Si vemos al heroe
+			if (ViendoAlHeroe())
+			{
+				// Color rojo
+				luz.color = Color.red;
+			}
+			else
+			{
+				// Color original
+				luz.color = clrOriginal;
+			}
+		}
+
 		/// <summary>
 		/// <para>Va hacia el objetivo</para>
 		/// </summary>
@@ -176,7 +201,7 @@ namespace MoonAntonio.Sigilo
 		private bool ViendoAlHeroe()// Si el enemigo esta viendo al heroe
 		{
 			// Si esta a rango
-			if (Vector3.Distance(transform.position, player.position) > rango)
+			if (Vector3.Distance(transform.position, player.position) < rango)
 			{
 				// Obtenemos calculo
 				Vector3 dirPlayer = (player.position - transform.position).normalized;
@@ -184,9 +209,10 @@ namespace MoonAntonio.Sigilo
 				// Si esta dentro del angulo de vision
 				if (anguloV < anguloVision / 2f)
 				{
-					if (Physics.Linecast(transform.position, player.position, mask))
+					if (!Physics.Linecast(transform.position, player.position, mask))
 					{
 						return true;
+						
 					}
 				}
 			}

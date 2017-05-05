@@ -163,6 +163,11 @@ MonoBehaviour:
   velocidad: 5
   timeGuardia: 0.3
   velRot: 100
+  luz: {fileID: 108757425024848206}
+  rango: 10
+  mask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!136 &136504544235230554
 CapsuleCollider:
   m_ObjectHideFlags: 1

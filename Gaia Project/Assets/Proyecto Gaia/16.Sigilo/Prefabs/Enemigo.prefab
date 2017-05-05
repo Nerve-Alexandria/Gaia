@@ -162,6 +162,7 @@ MonoBehaviour:
   path: {fileID: 0}
   velocidad: 5
   timeGuardia: 0.3
+  velRot: 100
 --- !u!136 &136504544235230554
 CapsuleCollider:
   m_ObjectHideFlags: 1

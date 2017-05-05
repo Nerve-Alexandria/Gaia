@@ -33,6 +33,10 @@ namespace MoonAntonio.Sigilo
 		/// <para>Tiempo de guardia del enemigo</para>
 		/// </summary>
 		public float timeGuardia = 0.0f;                                // Tiempo de guardia del enemigo
+		/// <summary>
+		/// <para>Velocidad de rotacion del enemigo</para>
+		/// </summary>
+		public float velRot = 0;										// Velocidad de rotacion del enemigo
 		#endregion
 
 		#region Inicializadores
@@ -50,7 +54,7 @@ namespace MoonAntonio.Sigilo
 			}
 
 			// Iniciamos ruta
-			StartCoroutine(GotoPath(waypoints));
+			StartCoroutine(Mover(waypoints));
 		}
 		#endregion
 
@@ -60,7 +64,7 @@ namespace MoonAntonio.Sigilo
 		/// </summary>
 		/// <param name="waypoints">Array de waypoints</param>
 		/// <returns></returns>
-		private IEnumerator GotoPath(Vector3[] waypoints)// Va hacia el objetivo
+		private IEnumerator Mover(Vector3[] waypoints)// Va hacia el objetivo
 		{
 			// Fija al enemigo en el primer waypoint
 			this.transform.position = waypoints[0];
@@ -68,6 +72,7 @@ namespace MoonAntonio.Sigilo
 			// Indica el siguiente objetivo
 			int objetivoActual = 1;
 			Vector3 objetivoWay = waypoints[objetivoActual];
+			this.transform.LookAt(objetivoWay);
 
 			// Mueve al enemigo al objetivo siguiente a la velocidad dada
 			while (true)
@@ -81,7 +86,30 @@ namespace MoonAntonio.Sigilo
 					objetivoActual = (objetivoActual + 1) % waypoints.Length;
 					objetivoWay = waypoints[objetivoActual];
 					yield return new WaitForSeconds(timeGuardia);
+
+					// Iniciamos giro
+					yield return StartCoroutine(Giro(objetivoWay));
 				}
+				yield return null;
+			}
+		}
+
+		/// <summary>
+		/// <para>Giro del enemigo</para>
+		/// </summary>
+		/// <param name="objetivo">Objetivo al que mirar</param>
+		/// <returns></returns>
+		private IEnumerator Giro(Vector3 objetivo)// Giro del enemigo
+		{
+			// Direccion y angulo
+			Vector3 dir = (objetivo - this.transform.position).normalized;
+			float anguloObjetivo = 90 - Mathf.Atan2(dir.z, dir.x) * Mathf.Rad2Deg;
+
+			// Rotacion hacia el objetivo
+			while (Mathf.DeltaAngle(this.transform.eulerAngles.y,anguloObjetivo) > 0.05f)
+			{
+				float angulo = Mathf.MoveTowardsAngle(this.transform.eulerAngles.y, anguloObjetivo, velRot * Time.deltaTime);
+				this.transform.eulerAngles = Vector3.up * angulo;
 				yield return null;
 			}
 		}

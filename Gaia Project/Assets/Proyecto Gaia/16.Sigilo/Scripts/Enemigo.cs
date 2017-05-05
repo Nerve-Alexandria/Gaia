@@ -44,14 +44,22 @@ namespace MoonAntonio.Sigilo
 		/// <summary>
 		/// <para>Rango del enemigo</para>
 		/// </summary>
-		public float rango = 0;											// Rango del enemigo
+		public float rango = 0;                                         // Rango del enemigo
+		/// <summary>
+		/// <para>Mascara de vision</para>
+		/// </summary>
+		public LayerMask mask;											// Mascara de vision
 		#endregion
 
 		#region Variables Privadas
 		/// <summary>
 		/// <para>Angulo de vision del enemigo</para>
 		/// </summary>
-		private float anguloVision = 0;									// Angulo de vision del enemigo
+		private float anguloVision = 0;                                 // Angulo de vision del enemigo
+		/// <summary>
+		/// <para>Transform del heroe</para>
+		/// </summary>
+		private Transform player;										// Transform del heroe
 		#endregion
 
 		#region Inicializadores
@@ -60,8 +68,9 @@ namespace MoonAntonio.Sigilo
 		/// </summary>
 		private void Start()// Init de Enemigo
 		{
-			// Asignar el angulo de vision del enemigo
+			// Asignar el angulo de vision del enemigo y al heroe
 			anguloVision = luz.spotAngle;
+			player = GameObject.FindGameObjectWithTag("Player").transform;
 
 			// Llenar el array con los waypoints
 			Vector3[] waypoints = new Vector3[path.childCount];
@@ -156,6 +165,32 @@ namespace MoonAntonio.Sigilo
 				Gizmos.color = Color.red;
 				Gizmos.DrawRay(transform.position, transform.forward * rango);
 			}
+		}
+		#endregion
+
+		#region Funcionalidad
+		/// <summary>
+		/// <para>Si el enemigo esta viendo al heroe</para>
+		/// </summary>
+		/// <returns>Si esta viendo al heroe o si no lo esta viendo</returns>
+		private bool ViendoAlHeroe()// Si el enemigo esta viendo al heroe
+		{
+			// Si esta a rango
+			if (Vector3.Distance(transform.position, player.position) > rango)
+			{
+				// Obtenemos calculo
+				Vector3 dirPlayer = (player.position - transform.position).normalized;
+				float anguloV = Vector3.Angle(transform.forward, dirPlayer);
+				// Si esta dentro del angulo de vision
+				if (anguloV < anguloVision / 2f)
+				{
+					if (Physics.Linecast(transform.position, player.position, mask))
+					{
+						return true;
+					}
+				}
+			}
+			return false;
 		}
 		#endregion
 	}

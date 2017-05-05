@@ -3,8 +3,8 @@
 // Alexandria.cs (11/01/2017)													\\
 // Autor: Antonio Mateo (Moon Antonio) 									        \\
 // Descripcion:		Game manager del juego                						\\
-// Fecha Mod:		27/03/2017													\\
-// Ultima Mod:		Agregado a GAIA												\\
+// Fecha Mod:		5/05/2017													\\
+// Ultima Mod:		Cambiado el namespace										\\
 //******************************************************************************\\
 
 #region Librerias
@@ -13,7 +13,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 #endregion
 
-namespace MoonAntonio
+namespace MoonAntonio.Pincho
 {
     /// <summary>
     /// <para>Game manager del juego </para>

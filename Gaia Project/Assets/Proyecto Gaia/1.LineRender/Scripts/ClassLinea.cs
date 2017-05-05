@@ -3,8 +3,8 @@
 // ClassLinea.cs (23/03/2017)													\\
 // Autor: Antonio Mateo (Moon Antonio) 									        \\
 // Descripcion:		Clase de la linea											\\
-// Fecha Mod:		23/03/2017													\\
-// Ultima Mod:		Version Inicial												\\
+// Fecha Mod:		5/05/2017													\\
+// Ultima Mod:		Cambiado el namespace										\\
 //******************************************************************************\\
 
 #region Librerias
@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 #endregion
 
-namespace MoonPincho
+namespace MoonPincho.LineRenderer
 {
 	/// <summary>
 	/// <para>Clase de la linea.</para>

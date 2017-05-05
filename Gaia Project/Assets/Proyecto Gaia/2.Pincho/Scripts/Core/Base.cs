@@ -3,15 +3,15 @@
 // Base.cs (11/01/2017)													        \\
 // Autor: Antonio Mateo (Moon Antonio) 									        \\
 // Descripcion:		Control general de la base rotatoria						\\
-// Fecha Mod:		27/03/2017													\\
-// Ultima Mod:		Agregado a GAIA												\\
+// Fecha Mod:		5/05/2017													\\
+// Ultima Mod:		Cambiado el namespace										\\
 //******************************************************************************\\
 
 #region Librerias
 using UnityEngine;
 #endregion
 
-namespace MoonAntonio
+namespace MoonAntonio.Pincho
 {
     /// <summary>
     /// <para>Control general de la base rotatoria</para>

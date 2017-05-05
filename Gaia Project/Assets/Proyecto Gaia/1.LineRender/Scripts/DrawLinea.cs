@@ -3,15 +3,15 @@
 // DrawLinea.cs (23/03/2017)													\\
 // Autor: Antonio Mateo (Moon Antonio) 									        \\
 // Descripcion:		Dibuja una linea en la direccion dada						\\
-// Fecha Mod:		23/03/2017													\\
-// Ultima Mod:		Version Inicial												\\
+// Fecha Mod:		5/05/2017													\\
+// Ultima Mod:		Cambiado el namespace										\\
 //******************************************************************************\\
 
 #region Librerias
 using UnityEngine;
 #endregion
 
-namespace MoonPincho
+namespace MoonPincho.LineRenderer
 {
 	/// <summary>
 	/// <para>Dibuja una linea en la direccion dada.</para>

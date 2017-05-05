@@ -128,9 +128,36 @@ namespace MoonAntonio.ColorSwitch
 		/// <param name="collision">Colisionador</param>
 		private void OnTriggerEnter2D(Collider2D collision)// Cuando colisiona con otro trigger
 		{
-			if (collision.tag == "Cyan")
+			if (collision.tag == ColorToString())
 			{
 
+			}
+		}
+		#endregion
+
+		#region Funcionalidad
+		/// <summary>
+		/// <para>Devuelve el color en String.</para>
+		/// </summary>
+		/// <returns>Devuelve el color en String</returns>
+		private string ColorToString()// Devuelve el color en String
+		{
+			switch (colorActual)
+			{
+				case Colores.Cyan:
+					return "Cyan";
+
+				case Colores.Amarillo:
+					return "Amarillo";
+
+				case Colores.Morado:
+					return "Morado";
+
+				case Colores.Rosa:
+					return "Rosa";
+
+				default:
+					return "Cyan";
 			}
 		}
 		#endregion

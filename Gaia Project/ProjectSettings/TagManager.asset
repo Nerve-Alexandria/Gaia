@@ -10,6 +10,7 @@ TagManager:
   - Rosa
   - Amarillo
   - Morado
+  - ColorSiguiente
   layers:
   - Default
   - TransparentFX

@@ -128,9 +128,15 @@ namespace MoonAntonio.ColorSwitch
 		/// <param name="collision">Colisionador</param>
 		private void OnTriggerEnter2D(Collider2D collision)// Cuando colisiona con otro trigger
 		{
-			if (collision.tag == ColorToString())
+			if (collision.tag == "ColorSiguiente")
 			{
+				SetRandomColor();
+				return;
+			}
 
+			if (collision.tag != ColorToString())
+			{
+				// TODO Game Over
 			}
 		}
 		#endregion

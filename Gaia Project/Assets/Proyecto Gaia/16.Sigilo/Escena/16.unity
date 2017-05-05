@@ -175,6 +175,11 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: -0.88268745
       objectReference: {fileID: 0}
+    - target: {fileID: 108803219970955076, guid: e9290267bc7373a4b930592fdf5019f1,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e9290267bc7373a4b930592fdf5019f1, type: 2}
   m_IsPrefabParent: 0
@@ -264,28 +269,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114992231621642088, guid: 8e6a10415f772dd4d90b658421f32fd6,
+        type: 2}
+      propertyPath: path
+      value: 
+      objectReference: {fileID: 1728302206}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e6a10415f772dd4d90b658421f32fd6, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1743719322 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1783565154356592, guid: 8e6a10415f772dd4d90b658421f32fd6,
-    type: 2}
-  m_PrefabInternal: {fileID: 1743719321}
---- !u!114 &1743719323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1743719322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07075f98db88ca54e9101e9ab29b4020, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  path: {fileID: 1728302206}
-  velocidad: 5
-  timeGuardia: 0.3
 --- !u!1001 &1883642519
 Prefab:
   m_ObjectHideFlags: 0

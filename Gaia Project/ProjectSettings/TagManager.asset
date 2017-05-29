@@ -21,10 +21,10 @@ TagManager:
   - 
   - 
   - Obstaculo
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - PlayerProjectiles
+  - EnemyProjectiles
+  - Enemies
   - 
   - 
   - 
@@ -47,4 +47,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 881059725
+    locked: 0
+  - name: EnemyProjectiles
+    uniqueID: 3365671751
+    locked: 0
+  - name: Enemies
+    uniqueID: 2762996177
+    locked: 0
+  - name: PlayerProjectiles
+    uniqueID: 3093147843
+    locked: 0
+  - name: Explosions
+    uniqueID: 3042448783
     locked: 0

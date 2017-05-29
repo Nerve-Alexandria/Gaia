@@ -17,3 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Proyecto Gaia/16.Sigilo/Escena/16.unity
     guid: fd3d69f44b3e3c6459f733ac12238a9a
+  - enabled: 1
+    path: Assets/Proyecto Gaia/17.Defender Space/Escenas/17.0.unity
+    guid: 924d83b9ed46c3247903e5ab3d649c5b
+  - enabled: 1
+    path: Assets/Proyecto Gaia/17.Defender Space/Escenas/17.1.unity
+    guid: 1f270a43bba6da947b983ecd4d02f2e8
+  - enabled: 1
+    path: Assets/Proyecto Gaia/17.Defender Space/Escenas/17.2.unity
+    guid: 00000000000000000000000000000000

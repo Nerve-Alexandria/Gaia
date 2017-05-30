@@ -1,18 +1,22 @@
 ﻿//                                  ┌∩┐(◣_◢)┌∩┐
 //																				\\
-// Tile.cs (00/00/0000)													\\
+// Tile.cs (30/05/2017)															\\
 // Autor: Antonio Mateo (Moon Antonio) 	antoniomt.moon@gmail.com				\\
-// Descripcion:																	\\
-// Fecha Mod:		00/00/0000													\\
-// Ultima Mod:																	\\
+// Descripcion:		Control del tile											\\
+// Fecha Mod:		30/05/2017													\\
+// Ultima Mod:		Version inicial												\\
 //******************************************************************************\\
 
 #region Librerias
 using UnityEngine;
 #endregion
 
-namespace MoonAntonio
+namespace MoonAntonio.I2048
 {
+	/// <summary>
+	/// <para>Control del tile</para>
+	/// </summary>
+	[AddComponentMenu("MoonAntonio/2048/Tile")]
 	public class Tile : MonoBehaviour 
 	{
 

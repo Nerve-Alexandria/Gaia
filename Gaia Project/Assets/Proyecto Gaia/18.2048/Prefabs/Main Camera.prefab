@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 92241975699087712}
   - component: {fileID: 124994180517511734}
   - component: {fileID: 81818640578128398}
-  - component: {fileID: 114029962233429548}
+  - component: {fileID: 114812303650891390}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -52,7 +52,7 @@ Camera:
   m_GameObject: {fileID: 1615103060945394}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0.019607844}
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -94,7 +94,7 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1615103060945394}
   m_Enabled: 1
---- !u!114 &114029962233429548
+--- !u!114 &114812303650891390
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -102,9 +102,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1615103060945394}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 658a9679759408d4e95a88b8fa2bf127, type: 3}
+  m_Script: {fileID: 11500000, guid: c1898ab2b58e99f49aeab06b9e371af7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
+  tileFab: {fileID: 100000, guid: 388a92013a02b8e4a9e9a650df001aff, type: 2}
 --- !u!124 &124994180517511734
 Behaviour:
   m_ObjectHideFlags: 1

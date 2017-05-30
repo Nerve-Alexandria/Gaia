@@ -48,7 +48,7 @@ namespace MoonAntonio.DefenderSpace
 		#endregion
 
 		#region Metodos
-		void OnLevelWasLoaded(int level)
+		/*void OnLevelWasLoaded(int level)
 		{
 			Debug.Log("MusicPlayer: loaded level " + level);
 			music.Stop();
@@ -67,7 +67,7 @@ namespace MoonAntonio.DefenderSpace
 			}
 			music.loop = true;
 			music.Play();
-		}
+		}*/
 		#endregion
 	}
 }

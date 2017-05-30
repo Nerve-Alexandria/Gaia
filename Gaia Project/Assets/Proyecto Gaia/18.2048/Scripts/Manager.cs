@@ -227,7 +227,7 @@ namespace MoonAntonio.I2048
 			if (gameOver)
 			{
 				if (GUI.Button(new Rect(Screen.width / 2 - 200, Screen.height / 2 - 30, 200, 30), "Puntuacion: " + score + "  Reiniciar?"))
-					SceneManager.LoadScene(18);
+					SceneManager.LoadScene("18");
 			}
 		}
 		#endregion

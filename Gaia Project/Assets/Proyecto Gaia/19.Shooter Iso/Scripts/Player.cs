@@ -19,6 +19,12 @@ namespace MoonAntonio.ShooterIso
 	[AddComponentMenu("MoonAntonio/ShooterIso/Player")]
 	public class Player : MonoBehaviour 
 	{
+		#region Variables
 
+		#endregion
+
+		#region Metodos
+
+		#endregion
 	}
 }

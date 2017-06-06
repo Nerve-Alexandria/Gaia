@@ -23,15 +23,19 @@ namespace MoonAntonio.ShooterIso
 		/// <summary>
 		/// <para>Transform del target.</para>
 		/// </summary>
-		public Transform target;									// Transform del target
+		public Transform target;                                    // Transform del target
+		/// <summary>
+		/// <para>Altura de la camara respecto al objetivo.</para>
+		/// </summary>
+		public float altura = 0.0f;									// Altura de la camara respecto al objetivo
 		/// <summary>
 		/// <para>Suavizado de movimiento de la camara.</para>
 		/// </summary>
-		public float smooth = 0.3f;                                 // Suavizado de movimiento de la camara
+		public float smooth = 0.0f;                                 // Suavizado de movimiento de la camara
 		/// <summary>
 		/// <para>Offset de la camara.</para>
 		/// </summary>
-		public float offSet = 7.0f;									// Offset de la camara
+		public float offSet = 0.0f;									// Offset de la camara
 		#endregion
 
 		#region Variables Privadas
@@ -53,8 +57,8 @@ namespace MoonAntonio.ShooterIso
 			// Fijar la posicion del eje x en la posicion del objetivo
 			pos.x = target.position.x;
 
-			// Fijar la posicion del eje y en la posicion del objetivo
-			pos.y = target.position.y;
+			// Fijar la posicion del eje y en la posicion del objetivo agregandole la altura
+			pos.y = target.position.y + altura;
 
 			// Fijar la posicion del eje z en la posicion del objetivo
 			pos.z = target.position.z - offSet;

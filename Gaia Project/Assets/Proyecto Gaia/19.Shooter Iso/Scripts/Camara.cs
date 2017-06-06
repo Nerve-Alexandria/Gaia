@@ -19,7 +19,7 @@ namespace MoonAntonio.ShooterIso
 	[AddComponentMenu("MoonAntonio/ShooterIso/Camara")]
 	public class Camara : MonoBehaviour 
 	{
-		#region Variables
+		#region Variables Publicas
 		/// <summary>
 		/// <para>Transform del target.</para>
 		/// </summary>
@@ -66,10 +66,6 @@ namespace MoonAntonio.ShooterIso
 			// Cambiar gradualmente una posicion(Vector) hasta un objetivo con un suavizado
 			this.transform.position = Vector3.SmoothDamp(this.transform.position, pos, ref vel, smooth);
 		}
-		#endregion
-
-		#region Metodos
-
 		#endregion
 	}
 }

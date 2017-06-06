@@ -63,6 +63,13 @@ namespace MoonAntonio.ShooterIso
 				// Interpolamos la rotacion con un tiempo
 				this.transform.rotation = Quaternion.Slerp(this.transform.rotation, targetR, offSet * Time.deltaTime);
 			}
+
+			// Si presionamos la tecla
+			if (Input.GetKey(KeyCode.W))
+			{
+				// Avanzamos
+				this.transform.Translate(Vector3.forward * vel * Time.deltaTime);
+			}
 		}
 		#endregion
 	}

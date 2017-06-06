@@ -28,6 +28,10 @@ namespace MoonAntonio.ShooterIso
 		/// <para>Suavizado de movimiento de la camara.</para>
 		/// </summary>
 		public float smooth = 0.3f;                                 // Suavizado de movimiento de la camara
+		/// <summary>
+		/// <para>Offset de la camara.</para>
+		/// </summary>
+		public float offSet = 7.0f;									// Offset de la camara
 		#endregion
 
 		#region Variables Privadas
@@ -43,7 +47,20 @@ namespace MoonAntonio.ShooterIso
 		/// </summary>
 		private void Update()// Actualizador de Camara
 		{
+			// Variable para controlar la posicion de la camara
 			Vector3 pos = new Vector3();
+
+			// Fijar la posicion del eje x en la posicion del objetivo
+			pos.x = target.position.x;
+
+			// Fijar la posicion del eje y en la posicion del objetivo
+			pos.y = target.position.y;
+
+			// Fijar la posicion del eje z en la posicion del objetivo
+			pos.z = target.position.z - offSet;
+
+			// Cambiar gradualmente una posicion(Vector) hasta un objetivo con un suavizado
+			this.transform.position = Vector3.SmoothDamp(this.transform.position, pos, ref vel, smooth);
 		}
 		#endregion
 

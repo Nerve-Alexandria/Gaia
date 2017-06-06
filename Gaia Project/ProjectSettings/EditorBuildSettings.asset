@@ -29,3 +29,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Proyecto Gaia/18.2048/Escenas/18.unity
     guid: 7502a3a7bb63b6c4f8b7dece68818273
+  - enabled: 1
+    path: Assets/Proyecto Gaia/19.Shooter Iso/Escena/19.unity
+    guid: edb45963d72617a498881b97feb18364

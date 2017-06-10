@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4623512460193946}
   - component: {fileID: 212647378250524876}
   - component: {fileID: 50420035926761122}
+  - component: {fileID: 114600429151828840}
   m_Layer: 0
   m_Name: Punto
   m_TagString: Untagged
@@ -113,6 +114,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &114600429151828840
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1392577171829758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7398af04fdb57704e9ac6b0fb158e805, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hook: {fileID: 50551519956034294}
+  unionPrefab: {fileID: 1840146429579522, guid: 6536c3aa0bcfad54293a0c6236e52ee4,
+    type: 2}
+  unionesMax: 7
 --- !u!212 &212052583182588572
 SpriteRenderer:
   m_ObjectHideFlags: 1

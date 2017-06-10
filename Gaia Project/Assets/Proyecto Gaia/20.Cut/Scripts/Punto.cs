@@ -23,7 +23,7 @@ namespace MoonAntonio.Cut
 		/// <summary>
 		/// <para>El Hinge del hook.</para>
 		/// </summary>
-		public HingeJoint2D hook;										// El Hinge del hook
+		public Rigidbody2D hook;										// El Hinge del hook
 		/// <summary>
 		/// <para>El prefab de la union.</para>
 		/// </summary>
@@ -51,9 +51,18 @@ namespace MoonAntonio.Cut
 		/// </summary>
 		private void GenerarLineas()// Genera las lineas del punto
 		{
+			// Asignar variables
+			Rigidbody2D prev = hook; // Rigidbody anterior
+
+			// Generar todas las uniones
 			for (int n = 0; n < unionesMax; n++)
 			{
-				Instantiate(unionPrefab, this.transform);
+				// Instanciar las uniones y conectarlas
+				GameObject go = Instantiate(unionPrefab, this.transform);
+				HingeJoint2D joint = go.GetComponent<HingeJoint2D>();
+				joint.connectedBody = prev;
+
+				prev = go.GetComponent<Rigidbody2D>();
 			}
 		}
 		#endregion

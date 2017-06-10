@@ -35,3 +35,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Proyecto Gaia/20.Cut/Escenas/20.unity
     guid: 146d98898929a1c4685124364dece8b6
+  - enabled: 1
+    path: Assets/Proyecto Gaia/21.Saltos/Escena/21.unity
+    guid: 332e3b1739d42584c84213abcbf11533

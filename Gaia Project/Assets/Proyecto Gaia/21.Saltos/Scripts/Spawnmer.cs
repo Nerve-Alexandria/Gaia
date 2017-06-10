@@ -9,6 +9,7 @@
 
 #region Librerias
 using UnityEngine;
+using System.Collections.Generic;
 #endregion
 
 namespace MoonAntonio.Saltos
@@ -19,6 +20,49 @@ namespace MoonAntonio.Saltos
 	[AddComponentMenu("MoonAntonio/Saltos/Spawnmer")]
 	public class Spawnmer : MonoBehaviour 
 	{
+		#region Variables Publicas
+		/// <summary>
+		/// <para>Tiempo entre cada spawn.</para>
+		/// </summary>
+		public float cd = 0.0f;											// Tiempo entre cada spawn
+		/// <summary>
+		/// <para>Prefab del enemigo 1.</para>
+		/// </summary>
+		public List<GameObject> enemigosPref = new List<GameObject>();	// Lista de enemigos
+		#endregion
 
+		#region Variables Privadas
+		/// <summary>
+		/// <para>Tiempo para el proximo spawn.</para>
+		/// </summary>
+		private float nextTimeToSpawn = 0.0f;                           // Tiempo para el proximo spawn
+		#endregion
+
+		#region Actualizadores
+		/// <summary>
+		/// <para>Actualizador de <see cref="Spawnmer"/>.</para>
+		/// </summary>
+		private void Update()// Actualizador de Spawnmer
+		{
+			// Comprobar si no se ha superado el tiempo
+			if (nextTimeToSpawn <= Time.time)
+			{
+				// Spawmear enemigo y aumentar el tiempo
+				Spawn(Random.Range(0, enemigosPref.Count));
+				nextTimeToSpawn = Time.time + cd;
+			}
+		}
+		#endregion
+
+		#region Metodos
+		/// <summary>
+		/// <para>Instancia un enemigo.</para>
+		/// </summary>
+		/// <param name="index">Enemigo a instanciar</param>
+		private void Spawn(int index)// Instancia un enemigo
+		{
+			Instantiate(enemigosPref[index]);
+		}
+		#endregion
 	}
 }

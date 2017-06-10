@@ -18,21 +18,21 @@ namespace MoonAntonio.Saltos
 	/// <para>Manager de Spawns del enemigo</para>
 	/// </summary>
 	[AddComponentMenu("MoonAntonio/Saltos/Spawnmer")]
-	public class Spawnmer : MonoBehaviour 
+	public class Spawnmer : MonoBehaviour
 	{
 		#region Variables Publicas
 		/// <summary>
 		/// <para>Tiempo entre cada spawn.</para>
 		/// </summary>
-		public float cd = 0.0f;											// Tiempo entre cada spawn
-		/// <summary>
-		/// <para>Prefab del enemigo 1.</para>
-		/// </summary>
+		public float cd = 0.0f;                                         // Tiempo entre cada spawn
+																		/// <summary>
+																		/// <para>Prefab del enemigo 1.</para>
+																		/// </summary>
 		public List<GameObject> enemigosPref = new List<GameObject>();  // Lista de enemigos
-		/// <summary>
-		/// <para>Puntos de spawns.</para>
-		/// </summary>
-		public Transform[] spawnPoints;									// Puntos de spawns
+																		/// <summary>
+																		/// <para>Puntos de spawns.</para>
+																		/// </summary>
+		public Transform[] spawnPoints;                                 // Puntos de spawns
 		#endregion
 
 		#region Variables Privadas

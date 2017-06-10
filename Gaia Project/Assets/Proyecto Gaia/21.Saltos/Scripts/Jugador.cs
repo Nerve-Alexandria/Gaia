@@ -9,6 +9,7 @@
 
 #region Librerias
 using UnityEngine;
+using UnityEngine.SceneManagement;
 #endregion
 
 namespace MoonAntonio.Saltos
@@ -54,6 +55,23 @@ namespace MoonAntonio.Saltos
 				rb.MovePosition(rb.position + Vector2.down);
 			}
 
+		}
+		#endregion
+
+		#region Metodos
+		/// <summary>
+		/// <para>Si colisiona con otro trigger.</para>
+		/// </summary>
+		/// <param name="collision">Collision</param>
+		private void OnTriggerEnter2D(Collider2D collision)// Si colisiona con otro trigger
+		{
+			// Si es un enemigo
+			if (collision.tag == "Enemigo")
+			{
+				// Game Over y volver a cargar
+				Debug.Log("Game Over !");
+				SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+			}
 		}
 		#endregion
 	}

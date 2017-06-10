@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212601881159762662}
   - component: {fileID: 61852102788831276}
   - component: {fileID: 50427602211868668}
+  - component: {fileID: 114099476008697530}
   m_Layer: 0
   m_Name: Enemigo02
   m_TagString: Untagged
@@ -87,6 +88,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.85, y: 0.9}
   m_EdgeRadius: 0
+--- !u!114 &114099476008697530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1584514505651674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bc5bc90a8bdc4a4ab2a0fc1eb65976b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212601881159762662
 SpriteRenderer:
   m_ObjectHideFlags: 1

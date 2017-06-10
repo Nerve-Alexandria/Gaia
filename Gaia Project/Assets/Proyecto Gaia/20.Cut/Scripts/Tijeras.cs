@@ -19,6 +19,30 @@ namespace MoonAntonio.Cut
 	[AddComponentMenu("MoonAntonio/Cut/Tijeras")]
 	public class Tijeras : MonoBehaviour 
 	{
+		#region Actualizadores
+		/// <summary>
+		/// <para>Actualizador de <see cref="Tijeras"/>.</para>
+		/// </summary>
+		private void Update()// Actualizador de Tijeras
+		{
+			// Si clicamos en el mouse
+			if (Input.GetMouseButton(0))
+			{
+				// Lanzamos un rayo desde la camara
+				RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
 
+				// Si el hit tiene collider
+				if (hit.collider != null)
+				{
+					// Si tiene la tag Union
+					if (hit.collider.tag == "Union")
+					{
+						// Destruirlo
+						Destroy(hit.collider.gameObject);
+					}
+				}
+			}
+		}
+		#endregion
 	}
 }

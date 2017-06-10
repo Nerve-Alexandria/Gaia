@@ -27,7 +27,11 @@ namespace MoonAntonio.Cut
 		/// <summary>
 		/// <para>El prefab de la union.</para>
 		/// </summary>
-		public GameObject unionPrefab;									// El prefab de la union
+		public GameObject unionPrefab;                                  // El prefab de la union
+		/// <summary>
+		/// <para>Fuerza de la escena</para>
+		/// </summary>
+		public Fuerza fuerza;											// Fuerza de la escena
 		/// <summary>
 		/// <para>Cantidad de uniones que tendra.</para>
 		/// </summary>
@@ -62,7 +66,16 @@ namespace MoonAntonio.Cut
 				HingeJoint2D joint = go.GetComponent<HingeJoint2D>();
 				joint.connectedBody = prev;
 
-				prev = go.GetComponent<Rigidbody2D>();
+				// Si no es el ultimo
+				if (n < unionesMax - 1)
+				{
+					prev = go.GetComponent<Rigidbody2D>();
+				}
+				else
+				{
+					// Si es el ultimo le agregamos la fuerza
+					fuerza.ConectarFinal(go.GetComponent<Rigidbody2D>());
+				}
 			}
 		}
 		#endregion

@@ -28,7 +28,11 @@ namespace MoonAntonio.Saltos
 		/// <summary>
 		/// <para>Prefab del enemigo 1.</para>
 		/// </summary>
-		public List<GameObject> enemigosPref = new List<GameObject>();	// Lista de enemigos
+		public List<GameObject> enemigosPref = new List<GameObject>();  // Lista de enemigos
+		/// <summary>
+		/// <para>Puntos de spawns.</para>
+		/// </summary>
+		public Transform[] spawnPoints;									// Puntos de spawns
 		#endregion
 
 		#region Variables Privadas
@@ -61,7 +65,23 @@ namespace MoonAntonio.Saltos
 		/// <param name="index">Enemigo a instanciar</param>
 		private void Spawn(int index)// Instancia un enemigo
 		{
-			Instantiate(enemigosPref[index]);
+			// Asignacion de variables
+			int randomIndex = Random.Range(0, spawnPoints.Length);
+			Transform point = spawnPoints[randomIndex];
+
+			// Comprobar los que salen por la derecha
+			if (randomIndex == 2 || randomIndex == 3)
+			{
+				// Instanciarlos y flipear en Y
+				GameObject go = Instantiate(enemigosPref[index], point.position, point.rotation);
+				go.transform.GetComponent<SpriteRenderer>().flipY = true;
+			}
+			else
+			{
+				// Instanciarlos
+				Instantiate(enemigosPref[index], point.position, point.rotation);
+			}
+			
 		}
 		#endregion
 	}

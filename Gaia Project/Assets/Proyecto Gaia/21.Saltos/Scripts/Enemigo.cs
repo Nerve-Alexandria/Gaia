@@ -19,6 +19,52 @@ namespace MoonAntonio.Saltos
 	[AddComponentMenu("MoonAntonio/Saltos/Enemigo")]
 	public class Enemigo : MonoBehaviour 
 	{
+		#region Variables Publicas
+		/// <summary>
+		/// <para>Rigidbody de <see cref="Enemigo"/>.</para>
+		/// </summary>
+		public Rigidbody2D rb;                                              // Rigidbody de Enemigo
+		/// <summary>
+		/// <para>Minima velocidad del enemigo.</para>
+		/// </summary>
+		public float minVel = 0.0f;											// Minima velocidad del enemigo
+		/// <summary>
+		/// <para>Maxima velocidad del enemigo.</para>
+		/// </summary>
+		public float maxVel = 0.0f;											// Maxima velocidad del enemigo
+		#endregion
 
+		#region Variables Privadas
+		/// <summary>
+		/// <para>Velocidad de movimiento.</para>
+		/// </summary>
+		private float vel = 1.0f;                                            // Velocidad de movimiento
+		#endregion
+
+		#region Inicializadores
+		/// <summary>
+		/// <para>Inicializador de <see cref="Enemigo"/>.</para>
+		/// </summary>
+		private void Start()// Inicializador de Enemigo
+		{
+			// Asignamos la velocidad del enemigo random
+			vel = Random.Range(minVel, maxVel);
+		}
+		#endregion
+
+		#region Actualizadores
+		/// <summary>
+		/// <para>Actualizador de Physicas de <see cref="Enemigo"/>.</para>
+		/// </summary>
+		private void FixedUpdate()// Actualizador de Physicas de Enemigo
+		{
+			// Asignamos variables
+			// Forward siempre se dirigira hacia delante independientemente de su eje r.Z
+			Vector2 forward = new Vector2(transform.right.x, transform.right.y);
+
+			// Mover al enemigo
+			rb.MovePosition(rb.position + forward * Time.fixedDeltaTime * vel);
+		}
+		#endregion
 	}
 }

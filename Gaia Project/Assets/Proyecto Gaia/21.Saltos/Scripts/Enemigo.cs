@@ -39,6 +39,10 @@ namespace MoonAntonio.Saltos
 		/// <para>Velocidad de movimiento.</para>
 		/// </summary>
 		private float vel = 0.0f;                                            // Velocidad de movimiento
+		/// <summary>
+		/// <para>Tiempo que estara cargado en pantalla.</para>
+		/// </summary>
+		private float timeJuego = 0.0f;										// Tiempo que estara cargado en pantalla
 		#endregion
 
 		#region Inicializadores
@@ -53,6 +57,21 @@ namespace MoonAntonio.Saltos
 		#endregion
 
 		#region Actualizadores
+		/// <summary>
+		/// <para>Actualizador de <see cref="Enemigo"/>.</para>
+		/// </summary>
+		private void Update()// Actualizador de Enemigo
+		{
+			// Reloj
+			timeJuego = timeJuego + 1 * Time.deltaTime;
+
+			// Si pasa del tiempo, es destruido
+			if (timeJuego >= 5.0f)
+			{
+				Destroy(this.gameObject);
+			}
+		}
+
 		/// <summary>
 		/// <para>Actualizador de Physicas de <see cref="Enemigo"/>.</para>
 		/// </summary>

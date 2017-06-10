@@ -12,6 +12,7 @@ TagManager:
   - Morado
   - ColorSiguiente
   - Union
+  - Enemigo
   layers:
   - Default
   - TransparentFX

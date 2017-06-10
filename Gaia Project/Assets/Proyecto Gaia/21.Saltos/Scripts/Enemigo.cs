@@ -38,7 +38,7 @@ namespace MoonAntonio.Saltos
 		/// <summary>
 		/// <para>Velocidad de movimiento.</para>
 		/// </summary>
-		private float vel = 1.0f;                                            // Velocidad de movimiento
+		private float vel = 0.0f;                                            // Velocidad de movimiento
 		#endregion
 
 		#region Inicializadores

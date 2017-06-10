@@ -128,6 +128,7 @@ MonoBehaviour:
   hook: {fileID: 50551519956034294}
   unionPrefab: {fileID: 1840146429579522, guid: 6536c3aa0bcfad54293a0c6236e52ee4,
     type: 2}
+  fuerza: {fileID: 0}
   unionesMax: 7
 --- !u!212 &212052583182588572
 SpriteRenderer:

@@ -34,6 +34,8 @@ namespace MoonAntonio.Cut
 		public void ConectarFinal(Rigidbody2D finalRB)// Conecta el final de una union con la fuerza
 		{
 			HingeJoint2D joint = gameObject.AddComponent<HingeJoint2D>();
+			joint.autoConfigureConnectedAnchor = false;
+			joint.connectedBody = finalRB;
 			joint.anchor = Vector2.zero;
 			joint.connectedAnchor = new Vector2(0.0f, -espacio);
 		}

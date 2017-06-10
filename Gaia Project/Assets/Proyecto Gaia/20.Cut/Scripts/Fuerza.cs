@@ -19,6 +19,24 @@ namespace MoonAntonio.Cut
 	[AddComponentMenu("MoonAntonio/Cut/Fuerza")]
 	public class Fuerza : MonoBehaviour 
 	{
+		#region Variables
+		/// <summary>
+		/// <para>Espacio hasta el enganche.</para>
+		/// </summary>
+		public float espacio = 0.0f;										// Espacio hasta el enganche
+		#endregion
 
+		#region Metodos
+		/// <summary>
+		/// <para>Conecta el final de una union con la fuerza.</para>
+		/// </summary>
+		/// <param name="finalRB">Final del rigidbody</param>
+		public void ConectarFinal(Rigidbody2D finalRB)// Conecta el final de una union con la fuerza
+		{
+			HingeJoint2D joint = gameObject.AddComponent<HingeJoint2D>();
+			joint.anchor = Vector2.zero;
+			joint.connectedAnchor = new Vector2(0.0f, -espacio);
+		}
+		#endregion
 	}
 }

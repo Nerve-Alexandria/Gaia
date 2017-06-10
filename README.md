@@ -61,6 +61,13 @@ Mecanicas testeadas desarrolladas en Unity3D como modo de experimento. Esto es u
   <img src="https://github.com/Nerve-Alexandria/Gaia/blob/master/res/prev20.gif?raw=true">
 </p>
 
+---
+
+## #21 Saltos
+<p align="center">
+  <img src="https://github.com/Nerve-Alexandria/Gaia/blob/master/res/prev21.gif?raw=true">
+</p>
+
 
 ## Acreditaciones & Agradecimientos
 

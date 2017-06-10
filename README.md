@@ -65,6 +65,8 @@ Mecanicas testeadas desarrolladas en Unity3D como modo de experimento. Esto es u
 ## Acreditaciones & Agradecimientos
 
 * Personaje #1 -> [Toshinho][1]
+* Sprites #21 -> [Zeratanus][2]
 
 
 [1]: http://toshinho.deviantart.com/
+[2]: http://zeratanus.deviantart.com/

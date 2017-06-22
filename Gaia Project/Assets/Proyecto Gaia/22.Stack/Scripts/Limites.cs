@@ -19,6 +19,15 @@ namespace MoonAntonio.Stack
 	[AddComponentMenu("MoonAntonio/Stack/Limites")]
 	public class Limites : MonoBehaviour 
 	{
-
+		#region Metodos
+		/// <summary>
+		/// <para>Elimina todo lo que toca.</para>
+		/// </summary>
+		/// <param name="collision"></param>
+		private void OnCollisionEnter(Collision collision)// Elimina todo lo que toca
+		{
+			Destroy(collision.gameObject);
+		}
+		#endregion
 	}
 }

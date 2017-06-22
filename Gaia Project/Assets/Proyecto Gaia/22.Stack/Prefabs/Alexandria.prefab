@@ -881,3 +881,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87266a0a05879f74bb5e863f583ade21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puntuacion: {fileID: 0}
+  coloresPiezas:
+  - serializedVersion: 2
+    rgba: 4292524792
+  - serializedVersion: 2
+    rgba: 4290051471
+  - serializedVersion: 2
+    rgba: 4291297274
+  - serializedVersion: 2
+    rgba: 4294833822
+  stackMaterial: {fileID: 2100000, guid: df0f06c0d57adf344a5bd7ba89ab1de0, type: 2}
+  panelMenu: {fileID: 0}
+  panelGame: {fileID: 0}

@@ -38,3 +38,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Proyecto Gaia/21.Saltos/Escena/21.unity
     guid: 332e3b1739d42584c84213abcbf11533
+  - enabled: 1
+    path: Assets/Proyecto Gaia/22.Stack/Escena/22.unity
+    guid: 9c5921f723fc99b4eaa7451e553a1a18

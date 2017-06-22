@@ -68,6 +68,12 @@ Mecanicas testeadas desarrolladas en Unity3D como modo de experimento. Esto es u
   <img src="https://github.com/Nerve-Alexandria/Gaia/blob/master/res/prev21.gif?raw=true">
 </p>
 
+---
+
+## #22 Stack
+<p align="center">
+  <img src="https://github.com/Nerve-Alexandria/Gaia/blob/master/res/prev22.gif?raw=true">
+</p>
 
 ## Acreditaciones & Agradecimientos
 

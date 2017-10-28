@@ -5,7 +5,7 @@
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/Nerve-Alexandria/Gaia/master/LICENSE)
 
 # Gaia
-Mecanicas testeadas desarrolladas en Unity3D como modo de experimento. Esto es un reto para desarrollar 1 mecanica al dia.
+Mecanicas desarrolladas en Unity3D como modo de experimento. Esto es un reto para desarrollar 1 mecanica al dia.
 
 ## #1 LineRenderer
 <p align="center">

@@ -1,7 +1,6 @@
 [![GitHub issues](https://img.shields.io/github/issues/Nerve-Alexandria/Gaia.svg)](https://github.com/Nerve-Alexandria/Gaia/issues)
 [![UnityVersion](https://img.shields.io/badge/Unity-5.6.1f1-blue.svg)](https://unity3d.com/es)
-[![Trello](https://img.shields.io/badge/Trello-OFF-red.svg)](https://github.com/MOON-TYPE/MIcaros)
-[![Slack Status](https://moonantonio.herokuapp.com/badge.svg)](https://moonantonio.herokuapp.com/)
+[![Trello](https://img.shields.io/badge/Trello-OFF-red.svg)](https://github.com/Nerve-Alexandria/Gaia)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/Nerve-Alexandria/Gaia/master/LICENSE)
 
 # Gaia
